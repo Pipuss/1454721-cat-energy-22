@@ -17,33 +17,34 @@
     <nav class="page-header__nav nav">
       <button class="nav__toggle" type="button" aria-label="Открыть меню"></button>
       <ul class="nav__list">
-        <li class="nav__list-item nav__list-item--active">
+        <li class="nav__list-item">
           <a href="#">Главная</a>
         </li>
         <li class="nav__list-item">
           <a href="catalog.html">Каталог продукции</a>
         </li>
-        <li class="nav__list-item">
+        <li class="nav__list-item nav__list-item--active">
           <a href="form.html">Подбор программы</a>
         </li>
       </ul>
     </nav>
 
   </header>
-<!-- 1111111111111111111111 -->
+
   <main>
 
     <h1 class="visually-hidden">Форма подбора программы питания интернет-магазина Cat Energy</h1>
 
     <section class="form-section">
 
-      <h2 class="form-section__title wrapper">Подбор программы</h2>
-      <p class="form-section__prompt wrapper"></p>
-
+      <div class="wrapper">
+        <h2 class="form-section__title">Подбор программы</h2>
+        <p class="form-section__promptr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      </div>
       <form class="pet-form" action="https://echo.htmlacademy.ru" method="POST">
 
         <fieldset class="pet-name">
-          <legend class="visually-hidden"></legend>
+          <legend class="visually-hidden">Информация про кота</legend>
           <div class="wrapper">
             <label class="pet-form__label" for="pet-name">Имя:*</label>
             <input class="pet-form__input-text" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
@@ -55,7 +56,7 @@
         </fieldset>
 
         <fieldset class="pet-goal">
-          <legend class="visually-hidden"></legend>
+          <legend class="visually-hidden">Цель подбора питания</legend>
           <div class="wrapper">
             <input class="pet-form__radio" type="radio" name="goal" id="radio1" value="weight-loss" checked>
             <label class="pet-form__label" for="radio1">Похудение</label>
@@ -78,13 +79,13 @@
 
         <fieldset class="pet-comment">
           <legend class="pet-form__legend">Комментарий</legend>
-          <textarea class="pet-form__input-text" name="comment-field" id="" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          <label class="visually-hidden" for="comment-field">Комментарий про кота</label>
+          <textarea class="pet-form__input-text" name="comment-field" id="comment-field" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
         <fieldset class="additional-goods">
           <legend class="pet-form__legend">Дополнительно</legend>
-          <div class="wrapper">
-            <ul class="additional-goods__list">
+            <ul class="additional-goods__list wrapper">
               <li class="additional-goods__list-item">
                 <input class="pet-form__checkbox" type="checkbox" name="sugar" id="sugar">
                 <label class="pet-form-label" for="sugar">Сахарозаменитель</label>
@@ -106,10 +107,9 @@
                 <svg class="checkbox-on" width="18" height="14"></svg>
               </li>
             </ul>
-          </div>
         </fieldset>
 
-        <button class="submit-button button" type="submit">Отправить заявку</button>
+        <button class="pet-form__button button" type="submit">Отправить заявку</button>
         <p class="form-prompt">* &mdash; Обьязательные поля</p>
       </form>
 
