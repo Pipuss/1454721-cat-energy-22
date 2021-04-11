@@ -41,9 +41,10 @@
         <h2 class="form-section__title">Подбор программы</h2>
         <p class="form-section__promptr">Заполните анкету, и мы подберем программу питания для вашего кота</p>
       </div>
+
       <form class="pet-form" action="https://echo.htmlacademy.ru" method="POST">
 
-        <fieldset class="pet-name">
+        <fieldset class="pet-name pet-form__name">
           <legend class="visually-hidden">Информация про кота</legend>
           <div class="wrapper">
             <label class="pet-form__label" for="pet-name">Имя:*</label>
@@ -55,7 +56,7 @@
           </div>
         </fieldset>
 
-        <fieldset class="pet-goal">
+        <fieldset class="pet-goal pet-form__goal">
           <legend class="visually-hidden">Цель подбора питания</legend>
           <div class="wrapper">
             <input class="pet-form__radio" type="radio" name="goal" id="radio1" value="weight-loss" checked>
@@ -67,8 +68,8 @@
           </div>
         </fieldset>
 
-        <fieldset class="owner-contacts">
-          <legend class="pet-form__legend">Контактные данные (владельца кота)</legend>
+        <fieldset class="owner-contacts pet-form__contacts">
+          <legend class="pet-form__legend section-title section-title--green-line">Контактные данные (владельца кота)</legend>
           <div class="wrapper">
             <label class="pet-form__label" for="owner-mail">E-mail:*</label>
             <input class="pet-form__input-text" type="email" name="owner-mail" id="owner-mail" placeholder="Kuklachev@gmail.com" required>
@@ -77,31 +78,31 @@
           </div>
         </fieldset>
 
-        <fieldset class="pet-comment">
-          <legend class="pet-form__legend">Комментарий</legend>
+        <fieldset class="pet-comment pet-form__comment">
+          <legend class="pet-form__legend section-title section-title--green-line">Комментарий</legend>
           <label class="visually-hidden" for="comment-field">Комментарий про кота</label>
           <textarea class="pet-form__input-text" name="comment-field" id="comment-field" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="additional-goods">
-          <legend class="pet-form__legend">Дополнительно</legend>
-            <ul class="additional-goods__list wrapper">
-              <li class="additional-goods__list-item">
+        <fieldset class="additional-category pet-form__additional">
+          <legend class="pet-form__legend section-title section-title--green-line">Дополнительно</legend>
+            <ul class="additional-category__list wrapper">
+              <li class="additional-category__list-item">
                 <input class="pet-form__checkbox" type="checkbox" name="sugar" id="sugar">
                 <label class="pet-form-label" for="sugar">Сахарозаменитель</label>
                 <svg class="checkbox-on" width="18" height="14"></svg>
               </li>
-              <li class="additional-goods__list-item">
+              <li class="additional-category__list-item">
                 <input class="pet-form__checkbox" type="checkbox" name="water" id="water">
                 <label class="pet-form-label" for="water">Питьевая вода</label>
                 <svg class="checkbox-on" width="18" height="14"></svg>
               </li>
-              <li class="additional-goods__list-item">
+              <li class="additional-category__list-item">
                 <input class="pet-form__checkbox" type="checkbox" name="milk" id="milk">
                 <label class="pet-form-label" for="milk">Молоко</label>
                 <svg class="checkbox-on" width="18" height="14"></svg>
               </li>
-              <li class="additional-goods__list-item">
+              <li class="additional-category__list-item">
                 <input class="pet-form__checkbox" type="checkbox" name="pills" id="pills">
                 <label class="pet-form-label" for="pills">Витамины</label>
                 <svg class="checkbox-on" width="18" height="14"></svg>
