@@ -1,0 +1,5 @@
+.nav {
+  font-weight: 500;
+
+  @include set-font-item (20px, 1);
+}

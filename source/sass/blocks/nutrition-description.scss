@@ -1,0 +1,24 @@
+.nutrition-description__list {
+  @include set-font-item (16px, 1.5, $f-family_arial);
+  @include reset-list;
+}
+
+.nutrition-description__title {
+  @include set-font-item (36px, 1.11);
+}
+
+.nutrition-description__list li {
+  width: 176px;
+  min-height: 54px;
+}
+
+/* stylelint-disable-next-line */
+@for $i from 1 through 4 {
+  .nutrition-item_#{$i}::before {
+    content: "";
+    display: block;
+    width: 134px;
+    height: 280px;
+    background: url(../../img/icon/nutrition-icon#{$i}.svg) no-repeat;
+  }
+}

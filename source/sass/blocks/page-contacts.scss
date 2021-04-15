@@ -1,0 +1,12 @@
+.page-contacts__title {
+  width: 140px;
+
+  @include set-font-item (16px, 1.12);
+  text-transform: uppercase;
+}
+
+.page-contacts__text {
+  width: 140px;
+
+  @include set-font-item (14px, 1.43, $f-family_arial);
+}

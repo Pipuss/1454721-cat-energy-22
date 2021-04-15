@@ -1,0 +1,37 @@
+.categories-list {
+  @include reset-list;
+}
+
+.categories-item {
+  min-width: 570px;
+  min-height: 374px;
+  background-color: $color-basic_grey;
+}
+
+.categories-item__title {
+  @include set-font-item (36px, 1);
+}
+
+.categories-item--weight-loss::before {
+  content: "";
+  display: block;
+  min-width: 100px;
+  min-height: 100px;
+  background: url("../../img/image/cat_back.png") no-repeat;
+}
+
+.categories-item--weight-gain::before {
+  content: "";
+  display: block;
+  min-width: 100px;
+  min-height: 100px;
+  background: url("../../img/image/cat_back-2.png") no-repeat;
+}
+
+.categories-item__text {
+  @include set-font-item (16px, 1.5, $f-family_arial);
+}
+
+.categories-item__link {
+  @include set-font-item (20px, 30px);
+}
