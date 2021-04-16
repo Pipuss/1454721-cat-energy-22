@@ -1,0 +1,10 @@
+.nav {
+  font-weight: 850;
+  text-transform: uppercase;
+
+  @include set-font-item (20px, 1);
+}
+
+.nav__list {
+  @include reset-list;
+}

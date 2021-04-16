@@ -1,0 +1,24 @@
+@mixin set-font-basic {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+}
+
+@mixin set-font-item ($f-size: 24px, $l-height: 1.54, $f-family:$f-family_oswald) {
+  font-size: $f-size;
+  line-height: $l-height;
+  font-family: $f-family;
+}
+
+@mixin reset-indent {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

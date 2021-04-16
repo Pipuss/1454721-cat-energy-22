@@ -1,0 +1,32 @@
+.product-example {
+  background-color: $color-basic_grey;
+}
+
+.product-example__title {
+  @include set-font-item (36px, 1.11);
+}
+
+.product-example__text {
+  @include set-font-item (14px, 1.29, $f-family_arial);
+}
+
+.stats-list__title {
+  @include set-font-item (24px, 1);
+  text-transform: uppercase;
+}
+
+.stats-list__description {
+  color: $color-special_dark-grey;
+
+  @include set-font-item (12px, 1, $f-family_arial);
+}
+
+.stats-list__caption {
+  @include set-font-item (14px, 1.43);
+  text-transform: uppercase;
+}
+
+.slider-controls__text {
+  @include set-font-item (16px, 1.25);
+  text-transform: uppercase;
+}
