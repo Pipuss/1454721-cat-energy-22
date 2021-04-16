@@ -41,13 +41,14 @@
   @include reset-indent;
   margin-bottom: 29px;
   text-align: center;
+  text-transform: uppercase;
 
   @include set-font-item (14px, 1);
 }
 
 .promo-section__button {
-  min-width: 244px;
-  min-height: 54px;
+  width: 280px;
+  min-height: 40px;
 
-  @include set-font-item (20px, 1);
+  @include set-font-item (14px, 1.29);
 }

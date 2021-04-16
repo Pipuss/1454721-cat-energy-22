@@ -9,7 +9,9 @@
 }
 
 .categories-item__title {
-  @include set-font-item (36px, 1);
+  text-transform: uppercase;
+
+  @include set-font-item (24px, 1.54);
 }
 
 .categories-item--weight-loss::before {
@@ -33,5 +35,7 @@
 }
 
 .categories-item__link {
-  @include set-font-item (20px, 30px);
+  text-transform: uppercase;
+
+  @include set-font-item (16px, 1);
 }

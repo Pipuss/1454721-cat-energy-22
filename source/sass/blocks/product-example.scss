@@ -16,7 +16,9 @@
 }
 
 .stats-list__description {
-  @include set-font-item (12px, 1);
+  color: $color-special_dark-grey;
+
+  @include set-font-item (12px, 1, $f-family_arial);
 }
 
 .stats-list__caption {

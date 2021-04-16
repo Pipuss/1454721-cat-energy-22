@@ -7,6 +7,7 @@
 
 .page-contacts__text {
   width: 140px;
+  color: $color-special_dark-grey;
 
   @include set-font-item (14px, 1.43, $f-family_arial);
 }

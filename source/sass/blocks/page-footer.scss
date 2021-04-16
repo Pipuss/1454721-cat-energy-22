@@ -2,6 +2,10 @@
   background-color: $color-basic_grey;
 }
 
+.social {
+  @include reset-list;
+}
+
 .social__link--vk {
   fill: $color-slecial-grey-2;
 }
@@ -11,6 +15,14 @@
 }
 
 .social__link--fb {
-  color: $color-white;
+  fill: transparent;
+  stroke: $color-slecial-grey-2;
+}
+
+.copyright__text {
+  color: $color-slecial-grey-2;
+}
+
+.copyright__logo {
   fill: $color-slecial-grey-2;
 }
