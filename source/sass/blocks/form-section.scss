@@ -1,0 +1,46 @@
+.form-section {
+  @include set-font-item (16px, 1.12);
+}
+
+.form-section__title {
+  font-weight: 400;
+
+  @include set-font-item (36px, 1);
+}
+
+.form-section__prompt {
+  @include set-font-item (14px, 1.29);
+}
+
+.pet-form__legend {
+  @include set-font-item (24px, 1.08);
+}
+
+.pet-form__prompt {
+  @include set-font-item (16px, 1.14, $f-family_arial);
+}
+
+.pet-form__button {
+  min-width: 280px;
+  min-height: 40px;
+  border: none;
+  outline: none;
+
+  @include set-font-item (16px, 1.25);
+}
+
+.pet-form__label {
+  color: $color-special-dark-grey;
+}
+
+.pet-form__input-text::placeholder {
+  color: $color-special-dark-grey;
+}
+
+.pet-form__radio-label {
+  color: $color-special-dark-grey-2;
+}
+
+.additional-category__list {
+  @include reset-list;
+}
