@@ -6,6 +6,15 @@
   &::before {
     content: "";
     display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../img/image/index-background-desktop-2.png");
+  }
+
+  &::after {
+    content: "";
+    display: block;
     width: 320px;
     height: 302px;
     position: absolute;
@@ -25,6 +34,7 @@
   position: absolute;
   top: 27px;
   left: 36px;
+  z-index: 1;
 }
 
 .promo-section__title {

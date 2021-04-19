@@ -1,5 +1,6 @@
 .page-contacts__title {
   width: 140px;
+  color: $color-special-black;
 
   @include set-font-item (16px, 1.12);
   text-transform: uppercase;
