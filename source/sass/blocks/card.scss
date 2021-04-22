@@ -1,0 +1,22 @@
+.card__image {
+  object-fit: none;
+}
+
+.card__title {
+  text-transform: uppercase;
+
+  @include set-font-item (16px, 1.25);
+}
+
+.card__description {
+  color: $color-special_dark-grey-2;
+
+  @include set-font-item (12px, 1.33, $f-family_arial);
+}
+
+.card__button {
+  min-width: 280px;
+  min-height: 40px;
+
+  @include set-font-item (16px, 1.25);
+}

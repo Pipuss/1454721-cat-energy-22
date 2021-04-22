@@ -33,8 +33,13 @@
   color: $color-special-dark-grey;
 }
 
-.pet-form__input-text::placeholder {
-  color: $color-special-dark-grey;
+.pet-form__input-text {
+  height: 45px;
+
+
+  &::placeholder {
+    color: $color-special-dark-grey;
+  }
 }
 
 .pet-form__radio-label {
@@ -43,4 +48,28 @@
 
 .additional-category__list {
   @include reset-list;
+}
+
+.pet-form__contacts label {
+  position: relative;
+}
+
+.pet-form__contacts label:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 185px;
+  width: 18px;
+  height: 13px;
+  background: url("../../img/icon/icon-mail.svg") no-repeat;
+}
+
+.pet-form__contacts label:nth-child(3)::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 185px;
+  width: 18px;
+  height: 21px;
+  background: url("../../img/icon/icon-tel.svg") no-repeat;
 }

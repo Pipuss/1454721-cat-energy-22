@@ -1,0 +1,9 @@
+.catalog__title {
+  font-weight: 400;
+
+  @include set-font-item (36px, 1);
+}
+
+.catalog__list {
+  @include reset-list;
+}

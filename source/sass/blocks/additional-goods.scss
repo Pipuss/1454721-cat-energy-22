@@ -1,0 +1,5 @@
+.additional-goods__title {
+  font-weight: 400;
+
+  @include set-font-item(24px, 1);
+}
