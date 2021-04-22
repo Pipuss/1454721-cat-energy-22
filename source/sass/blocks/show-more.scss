@@ -1,0 +1,20 @@
+.show-more__title {
+  text-transform: uppercase;
+
+  @include set-font-item (16px, 1.25);
+}
+
+.show-more__text {
+  color: $color-special-dark-grey;
+
+  @include set-font-item (12px, 1.33);
+}
+
+.show-more__button {
+  min-width: 279px;
+  min-height: 40px;
+  background-color: $color-basic_grey;
+  color: $color-special-dark-grey;
+
+  @include set-font-item (16px, 1.25);
+}

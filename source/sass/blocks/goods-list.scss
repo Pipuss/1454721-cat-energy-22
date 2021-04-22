@@ -1,0 +1,16 @@
+.goods-list {
+  @include reset-list;
+}
+
+.goods-list__gift {
+  min-width: 280px;
+  min-height: 289px;
+  background: url("../../img/image/gift-photo-mobile.png") no-repeat;
+}
+
+.goods-list__gift p {
+  width: 161px;
+  color: $color-white;
+
+  @include set-font-item (16px, 1.25, $f-family_arial);
+}
