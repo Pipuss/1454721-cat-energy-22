@@ -2,8 +2,23 @@
   background-color: $color-basic_grey;
 }
 
+.page-footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include width--m {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .social {
   @include reset-list;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 130px;
 }
 
 .social__link--vk {
@@ -19,8 +34,25 @@
   stroke: $color-slecial-grey-2;
 }
 
+.copyright {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include width--m {
+    width: 0;
+    min-width: 163px;
+    justify-content: flex-end;
+  }
+}
+
 .copyright__text {
   color: $color-slecial-grey-2;
+
+  @include width--m {
+    margin-right: 22px;
+  }
 }
 
 .copyright__logo {

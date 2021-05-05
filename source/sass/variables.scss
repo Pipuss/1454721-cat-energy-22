@@ -13,10 +13,15 @@ $color-white: #ffffff;
 $color-black: #000000;
 $color-special-black: #111111;
 $color-background_gray: #504f54;
+$color-transparent: rgba(255, 255, 255, 0);
 
 // Font
 
 $f-family_oswald: "Oswald", "Arial", sans-serif;
 $f-family_arial: "Arial", sans-serif;
 
-// Another
+// Viewports
+
+$mobile-width: 321px;
+$tablet-width: 768px;
+$desktop-width: 1288px;

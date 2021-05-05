@@ -1,41 +1,131 @@
 .categories-list {
   @include reset-list;
+
+  @include width--l {
+    display: flex;
+    flex-basis: 570px;
+  }
 }
 
 .categories-item {
-  min-width: 570px;
-  min-height: 374px;
+  min-height: 266px;
   background-color: $color-basic_grey;
-}
+  position: relative;
+  padding-left: 20px;
+  padding-top: 21px;
+  margin-bottom: 20px;
 
-.categories-item__title {
-  text-transform: uppercase;
+  @include width--m {
+    min-height: 372px;
+    padding-left: 53px;
+    padding-top: 77px;
+    margin-bottom: 30px;
+  }
 
-  @include set-font-item (24px, 1.54);
+  @include width--l {
+    min-width: 570px;
+    min-height: 374px;
+
+    &:not(:last-child) {
+      margin-right: 80px;
+    }
+  }
 }
 
 .categories-item--weight-loss::before {
   content: "";
-  display: block;
-  min-width: 100px;
-  min-height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  z-index: 1;
+  width: 50px;
+  height: 53px;
   background: url("../../img/image/cat_back.png") no-repeat;
+  background-size: cover;
+
+  @include width--m {
+    width: 200px;
+    height: 211px;
+    top: 41px;
+    left: 430px;
+  }
+
+  @include width--l {
+    width: 100px;
+    height: 106px;
+    top: 25px;
+    left: 90px;
+  }
 }
 
 .categories-item--weight-gain::before {
   content: "";
-  display: block;
-  min-width: 100px;
-  min-height: 100px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  width: 67px;
+  height: 50px;
   background: url("../../img/image/cat_back-2.png") no-repeat;
+  background-size: cover;
+
+  @include width--m {
+    width: 268px;
+    height: 200px;
+    top: 41px;
+    left: 400px;
+  }
+
+  @include width--l {
+    width: 134px;
+    height: 100px;
+    top: 25px;
+    left: 90px;
+  }
+}
+
+.categories-item__title {
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-left: 91px;
+  margin-bottom: 29px;
+
+  @include set-font-item (24px, 1.54);
+
+  @include width--m {
+    padding-left: 0;
+    margin-bottom: 24px;
+
+    @include set-font-item (36px, 1);
+  }
+
+  @include width--l {
+    padding-left: 214px;
+    margin-bottom: 73px;
+  }
 }
 
 .categories-item__text {
+  width: 227px;
+
   @include set-font-item (16px, 1.5, $f-family_arial);
+
+  @include width--m {
+    width: 377px;
+    margin-bottom: 48px;
+  }
+
+  @include width--l {
+    width: 467px;
+    margin-bottom: 23px;
+  }
 }
 
 .categories-item__link {
   text-transform: uppercase;
 
   @include set-font-item (16px, 1);
+
+  @include width--m {
+    @include set-font-item (20px, 1.5);
+  }
 }

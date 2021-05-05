@@ -1,32 +1,146 @@
 .product-example {
+  min-width: $mobile-width -1;
   background-color: $color-basic_grey;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    background: none;
+  }
+}
+
+.product-example .wrapper {
+  @include width--l {
+    display: grid;
+    grid-template-columns: 436px 696px;
+    grid-template-rows: repeat(4, min-content);
+  }
 }
 
 .product-example__title {
+  font-weight: 400;
+  margin-bottom: 33px;
+
   @include set-font-item (36px, 1.11);
+
+  @include width--m {
+    margin-bottom: 63px;
+
+    @include set-font-item (60px, 1);
+  }
+
+  @include width--l {
+    grid-row: 1 /2;
+    position: relative;
+    top: -200px;
+  }
 }
 
 .product-example__text {
+  margin-bottom: 25px;
+
   @include set-font-item (14px, 1.29, $f-family_arial);
+
+  @include width--m {
+    margin-bottom: 54px;
+
+    @include set-font-item (16px, 1.5, $f-family_arial);
+  }
+
+  @include width--l {
+    grid-row: 2 /3;
+    width: 436px;
+  }
+}
+
+.stats-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-width: 279px;
+
+  @include width--m {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  @include width--l {
+    grid-row: 3 / 4;
+  }
+}
+
+.stats-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 124px;
+  min-height: 64px;
+
+  &:first-child {
+    margin-right: 31px;
+  }
+
+  @include width--l {
+    min-width: 162px;
+    min-height: 77px;
+  }
 }
 
 .stats-list__title {
   @include set-font-item (24px, 1);
   text-transform: uppercase;
+
+  @include width--m {
+    @include set-font-item (30px, 1.23);
+  }
 }
 
 .stats-list__description {
   color: $color-special_dark-grey;
+  margin: 0;
 
   @include set-font-item (12px, 1, $f-family_arial);
+
+  @include width--m {
+    @include set-font-item (14px, 1, $f-family_arial);
+  }
 }
 
 .stats-list__caption {
-  @include set-font-item (14px, 1.43);
   text-transform: uppercase;
+  margin: 0;
+
+  @include set-font-item (14px, 1.43);
+
+  @include width--m {
+    margin-left: auto;
+  }
+
+  @include width--l {
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.stats-list__cost {
+  @include width--m {
+    display: block;
+    text-align: right;
+  }
+
+  @include width--l {
+    padding-left: 63px;
+  }
 }
 
 .slider-controls__text {
   @include set-font-item (16px, 1.25);
   text-transform: uppercase;
+}
+
+.example-slider {
+  @include width--l {
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+    margin-top: -200px;
+  }
 }
