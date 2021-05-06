@@ -15,6 +15,7 @@
 
 .nutrition-description__title {
   @include set-font-item (36px, 1.11);
+  font-weight: 400;
   margin-bottom: 38px;
 
   @include width--m {
@@ -62,7 +63,7 @@
     left: 0;
     width: 60px;
     height: 60px;
-    background: url(../../img/icon/nutrition-icon#{$i}.svg) no-repeat;
+    background: url(../img/icon/nutrition-icon#{$i}.svg) no-repeat;
 
     @include width--m {
       top: 40px;
@@ -80,7 +81,7 @@
       right: 0;
       width: 112px;
       height: 280px;
-      background: url(../../img/icon/number#{$i}.png) no-repeat;
+      background: url(../img/icon/number#{$i}.png) no-repeat;
       z-index: -1;
     }
   }

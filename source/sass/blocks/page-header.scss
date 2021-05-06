@@ -24,7 +24,7 @@
   }
 
   @include width--m {
-    width: 174px;
+    min-width: 174px;
     margin: 0;
     padding-left: 30px;
     padding-top: 24px;
@@ -44,7 +44,6 @@
   @include width--m {
     width: 174px;
     height: 52px;
-    margin-right: 95px;
   }
 }
 
