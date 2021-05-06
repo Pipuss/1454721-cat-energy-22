@@ -22,3 +22,21 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin width--s {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin width--m {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin width--l {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}

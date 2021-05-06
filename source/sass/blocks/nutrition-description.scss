@@ -1,24 +1,88 @@
 .nutrition-description__list {
   @include set-font-item (16px, 1.5, $f-family_arial);
   @include reset-list;
+
+  @include width--m {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+  }
+
+  @include width--l {
+    margin-bottom: 205px;
+  }
 }
 
 .nutrition-description__title {
   @include set-font-item (36px, 1.11);
+  font-weight: 400;
+  margin-bottom: 38px;
+
+  @include width--m {
+    @include set-font-item (60px, 1);
+    margin-bottom: 32px;
+  }
 }
 
 .nutrition-description__list li {
-  width: 176px;
-  min-height: 54px;
+  min-height: 60px;
+  padding-left: 80px;
+  position: relative;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 42px;
+  }
+
+  @include width--m {
+    width: 246px;
+    min-height: 280px;
+    padding-left: 0;
+    padding-top: 151px;
+
+    &:nth-child(odd) {
+      margin-right: 153px;
+    }
+  }
+
+  @include width--l {
+    width: 230px;
+
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+  }
 }
 
 /* stylelint-disable-next-line */
 @for $i from 1 through 4 {
   .nutrition-item_#{$i}::before {
     content: "";
-    display: block;
-    width: 134px;
-    height: 280px;
-    background: url(../../img/icon/nutrition-icon#{$i}.svg) no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: url(../img/icon/nutrition-icon#{$i}.svg) no-repeat;
+
+    @include width--m {
+      top: 40px;
+      left: 0;
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .nutrition-item_#{$i}::after {
+    @include width--m {
+      content: "";
+      position: absolute;
+      top: 10px;
+      right: 0;
+      width: 112px;
+      height: 280px;
+      background: url(../img/icon/number#{$i}.png) no-repeat;
+      z-index: -1;
+    }
   }
 }

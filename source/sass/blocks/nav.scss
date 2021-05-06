@@ -3,8 +3,74 @@
   text-transform: uppercase;
 
   @include set-font-item (20px, 1);
+
+  @include width--m {
+    @include set-font-item (18px, 1.33);
+  }
+
+  @include width--l {
+    color: $color-white;
+
+    @include set-font-item (20px, 1.5);
+  }
 }
 
 .nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
   @include reset-list;
+
+  @include width--m {
+    flex-direction: row;
+    min-width: 440px;
+    padding-top: 40px;
+    padding-right: 30px;
+  }
+
+  @include width--l {
+    padding-top: 67px;
+    padding-right: 110px;
+  }
+}
+
+.nav__list-item {
+  min-height: 66px;
+
+  @include width--m {
+    min-height: 36px;
+
+    &:not(:first-child) {
+      padding-left: 35px;
+    }
+
+    &--active {
+      position: relative;
+    }
+
+    &--active::after {
+      content: "";
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $color-basic_green;
+    }
+  }
+
+  @include width--l {
+    &--active::after {
+      background-color: $color-white;
+    }
+  }
+}
+
+.nav__list-item a {
+  @include width--l {
+    color: $color-white;
+  }
 }

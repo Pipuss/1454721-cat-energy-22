@@ -1,1 +1,86 @@
-// page-header
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+  @include width--m {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 64px;
+  }
+
+  @include width--l {
+    margin-bottom: 111px;
+  }
+}
+
+.page-header__inner {
+  min-width: 320px;
+  min-height: 66px;
+  padding-top: 12px;
+  padding-left: 20px;
+
+  @include width--s {
+    margin: 0 auto;
+  }
+
+  @include width--m {
+    min-width: 174px;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 24px;
+  }
+
+  @include width--l {
+    padding-left: 110px;
+    padding-top: 53px;
+  }
+}
+
+.page-header__logo {
+  position: relative;
+  width: 191px;
+  height: 38px;
+
+  @include width--m {
+    width: 174px;
+    height: 52px;
+  }
+}
+
+.page-header__nav-toggle {
+  position: absolute;
+  top: 0;
+  right: -55px;
+  width: 18px;
+  height: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: $color-transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 25px;
+    height: 1px;
+    background-color: $color-black;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 25px;
+    height: 1px;
+    background-color: $color-black;
+    transform: rotate(-45deg);
+  }
+
+  @include width--m {
+    display: none;
+  }
+}
