@@ -11,6 +11,10 @@
   @include width--l {
     color: $color-white;
 
+    &--text-black {
+      color: $color-black;
+    }
+
     @include set-font-item (20px, 1.5);
   }
 }
@@ -69,8 +73,8 @@
   }
 }
 
-.nav__list-item a {
+.nav--text-black .nav__list-item--active::after {
   @include width--l {
-    color: $color-white;
+    background-color: $color-basic_green;
   }
 }
