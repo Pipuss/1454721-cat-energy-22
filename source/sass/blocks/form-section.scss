@@ -209,7 +209,7 @@
 .additional-category__list-item {
   flex-basis: 50%;
 
-  @include width--l{
+  @include width--l {
     flex-basis: 25%;
   }
 }
@@ -221,7 +221,6 @@
 
   @include width--m {
     flex-direction: row;
-
   }
 }
 
