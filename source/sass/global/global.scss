@@ -43,20 +43,22 @@ img {
   color: $color-white;
   text-transform: uppercase;
   background-color: $color-basic_green;
+  border: none;
+  outline: none;
 }
 
 .wrapper {
-  width: 320px;
+  min-width: 320px;
   padding: 0 20px;
   margin: 0 auto;
 
   @media (min-width: $tablet-width) {
-    width: $tablet-width;
-    padding: 0 30px;
+    min-width: $tablet-width;
+    padding: 0 70px;
   }
 
   @media (min-width: $desktop-width) {
-    width: $desktop-width;
+    max-width: $desktop-width;
     padding: 0 110px;
   }
 }

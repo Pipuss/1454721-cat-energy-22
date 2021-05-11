@@ -1,44 +1,243 @@
 .form-section {
   @include set-font-item (16px, 1.12);
+
+  @include width--m {
+    @include set-font-item (20px, 1.5);
+  }
 }
 
 .form-section__title {
   font-weight: 400;
+  margin-bottom: 37px;
 
   @include set-font-item (36px, 1);
+
+  @include width--m {
+    margin-bottom: 59px;
+
+    @include set-font-item (60px, 1);
+  }
+
+  @include width--l {
+    margin-bottom: 56px;
+  }
 }
 
 .form-section__prompt {
+  margin-bottom: 39px;
+
   @include set-font-item (14px, 1.29);
+
+  @include width--m {
+    margin-bottom: 66px;
+
+    @include set-font-item (20px, 1.5);
+  }
+}
+
+.pet-form__name,
+.pet-form__goal,
+.pet-form__contacts,
+.pet-form__comment,
+.pet-form__additional {
+  border: none;
+
+  @include reset-indent;
+}
+
+.pet-form__name-goal {
+  @include width--l {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 110px;
+    display: flex;
+  }
+}
+
+.pet-form__name {
+  margin-bottom: 51px;
+
+  @include width--m {
+    margin-bottom: 72px;
+  }
+}
+// ddd
+.pet-form__name .wrapper,
+.pet-form__goal .wrapper {
+  @include width--l {
+    min-width: 0;
+    width: 568px;
+    padding: 0;
+  }
+}
+
+.pet-form__name .wrapper,
+.owner-contacts .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.pet-form__input-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.pet-form__label {
+  margin-right: 13px;
+  flex-basis: max-content;
+  align-self: center;
+  color: $color-special-dark-grey;
+
+  &--mail {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 220px;
+      width: 18px;
+      height: 13px;
+      z-index: 1;
+      background: url("../img/icon/icon-mail.svg") no-repeat;
+    }
+  }
+
+  &--tel {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 220px;
+      width: 18px;
+      height: 21px;
+      z-index: 1;
+      background: url("../img/icon/icon-tel.svg") no-repeat;
+    }
+  }
+}
+
+.pet-form__input-text {
+  min-height: 45px;
+  position: relative;
+
+  &::placeholder {
+    color: $color-special-dark-grey;
+  }
+  flex-grow: 1;
+
+
+  @include reset-indent;
+  padding-left: 16px;
+  margin-bottom: 12px;
+  border: 1px solid $color-special-grey-3;
+
+  @include width--m {
+    min-width: 497px;
+  }
 }
 
 .pet-form__legend {
+  padding-left: 20px;
+  margin-bottom: 35px;
+
   @include set-font-item (24px, 1.08);
+
+  @include width--m {
+    @include set-font-item (36px, 1);
+  }
+}
+
+.goal-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin-bottom: 45px;
+}
+
+.goal-list__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.pet-form__contacts {
+  margin-bottom: 24px;
+}
+
+.pet-form__comment {
+  margin-bottom: 23px;
+}
+
+.pet-form__comment-area {
+  min-height: 150px;
+  width: 100%;
+  padding-left: 15px;
+  padding-top: 9px;
+  padding-right: 12px;
+
+  @include set-font-item (16px, 1.12);
+
+  @include width--m {
+    @include set-font-item (20px, 1.5);
+  }
+}
+
+.pet-form__additional {
+  margin-bottom: 21px;
+}
+
+.additional-category__list {
+  @include reset-list;
+  text-transform: uppercase;
+
+  @include width--m {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.additional-category__list-item {
+  flex-basis: 50%;
+
+  @include width--l {
+    flex-basis: 25%;
+  }
+}
+
+.pet-form__confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include width--m {
+    flex-direction: row;
+  }
 }
 
 .pet-form__prompt {
   @include set-font-item (16px, 1.14, $f-family_arial);
+
+  @include width--m {
+    @include set-font-item (16px, 1, $f-family_arial);
+  }
 }
 
 .pet-form__button {
   min-width: 280px;
   min-height: 40px;
-  border: none;
-  outline: none;
 
   @include set-font-item (16px, 1.25);
-}
 
-.pet-form__label {
-  color: $color-special-dark-grey;
-}
+  @include width--m {
+    min-width: 282px;
+    min-height: 52px;
+  }
 
-.pet-form__input-text {
-  height: 45px;
-
-
-  &::placeholder {
-    color: $color-special-dark-grey;
+  @include width--l {
+    min-width: 568px;
+    min-height: 54px;
   }
 }
 
@@ -46,30 +245,6 @@
   color: $color-special-dark-grey-2;
 }
 
-.additional-category__list {
-  @include reset-list;
-}
-
 .pet-form__contacts label {
   position: relative;
-}
-
-.pet-form__contacts label:nth-child(1)::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 185px;
-  width: 18px;
-  height: 13px;
-  background: url("../../img/icon/icon-mail.svg") no-repeat;
-}
-
-.pet-form__contacts label:nth-child(3)::after {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 185px;
-  width: 18px;
-  height: 21px;
-  background: url("../../img/icon/icon-tel.svg") no-repeat;
 }
