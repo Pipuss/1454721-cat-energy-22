@@ -46,41 +46,47 @@
 
       <form class="pet-form" action="https://echo.htmlacademy.ru" method="POST">
 
-        <fieldset class="pet-name pet-form__name">
-          <legend class="visually-hidden">Информация про кота</legend>
-          <div class="wrapper">
-            <div class="pet-form__input-row">
-              <label class="pet-form__label" for="pet-name">Имя:*</label>
-              <input class="pet-form__input-text" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
-            </div>
-            <div class="pet-form__input-row">
-              <label class="pet-form__label" for="pet-weight">Вес (кг):*</label>
-              <input class="pet-form__input-text" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
-            </div>
-            <div class="pet-form__input-row">
-              <label class="pet-form__label" for="pet-age">Возраст (лет):*</label>
-              <input class="pet-form__input-text" type="number" name="pet-age" id="pet-age" placeholder="7">
-            </div>
-          </div>
-        </fieldset>
+        <div class="pet-form__name-goal">
 
-        <fieldset class="pet-goal pet-form__goal">
-          <legend class="visually-hidden">Цель подбора питания</legend>
-          <ul class="pet-form__goal-list goal-list wrapper">
-            <li class="goal-list__item">
-              <input class="pet-form__radio" type="radio" name="goal" id="radio1" value="weight-loss" checked>
-              <label class="pet-form__radio-label" for="radio1">Похудение</label>
-            </li>
-            <li class="goal-list__item">
-              <input class="pet-form__radio" type="radio" name="goal" id="radio2" value="weight-gain">
-              <label class="pet-form__radio-label" for="radio2">Набор массы</label>
-            </li>
-            <li class="goal-list__item">
-              <input class="pet-form__radio" type="radio" name="goal" id="radio3" value="Need help in choise">
-              <label class="pet-form__radio-label" for="radio3">Не знаю (нужен ваш совет)</label>
-            </li>
-          </ul>
-        </fieldset>
+          <fieldset class="pet-name pet-form__name">
+            <legend class="visually-hidden">Информация про кота</legend>
+            <div class="wrapper">
+              <div class="pet-form__input-row">
+                <label class="pet-form__label" for="pet-name">Имя:*</label>
+                <input class="pet-form__input-text" type="text" name="pet-name" id="pet-name" placeholder="Барсик" required>
+              </div>
+              <div class="pet-form__input-row">
+                <label class="pet-form__label" for="pet-weight">Вес (кг):*</label>
+                <input class="pet-form__input-text" type="number" name="pet-weight" id="pet-weight" placeholder="7" required>
+              </div>
+              <div class="pet-form__input-row">
+                <label class="pet-form__label" for="pet-age">Возраст (лет):*</label>
+                <input class="pet-form__input-text" type="number" name="pet-age" id="pet-age" placeholder="7">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="pet-goal pet-form__goal">
+            <legend class="visually-hidden">Цель подбора питания</legend>
+            <div class="wrapper">
+              <ul class="pet-form__goal-list goal-list">
+                <li class="goal-list__item">
+                  <input class="pet-form__radio" type="radio" name="goal" id="radio1" value="weight-loss" checked>
+                  <label class="pet-form__radio-label" for="radio1">Похудение</label>
+                </li>
+                <li class="goal-list__item">
+                  <input class="pet-form__radio" type="radio" name="goal" id="radio2" value="weight-gain">
+                  <label class="pet-form__radio-label" for="radio2">Набор массы</label>
+                </li>
+                <li class="goal-list__item">
+                  <input class="pet-form__radio" type="radio" name="goal" id="radio3" value="Need help in choise">
+                  <label class="pet-form__radio-label" for="radio3">Не знаю (нужен ваш совет)</label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+        </div>
 
         <fieldset class="owner-contacts pet-form__contacts">
           <legend class="pet-form__legend section-title section-title--green-line">Контактные данные (владельца кота)</legend>
