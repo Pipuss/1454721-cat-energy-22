@@ -51,7 +51,6 @@
     margin: 0 auto;
     padding: 0 110px;
     display: flex;
-    justify-content: space-between;
   }
 }
 
@@ -66,6 +65,8 @@
 .pet-form__name .wrapper,
 .pet-form__goal .wrapper {
   @include width--l {
+    min-width: 0;
+    width: 568px;
     padding: 0;
   }
 }
