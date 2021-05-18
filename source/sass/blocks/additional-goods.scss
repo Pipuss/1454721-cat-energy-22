@@ -1,5 +1,17 @@
+.additional-goods .wrapper {
+  @include width--l {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 79px;
+  }
+}
+
 .additional-goods__title {
   font-weight: 400;
 
   @include set-font-item(24px, 1);
+
+  @include width--m {
+    @include set-font-item (36px, 1);
+  }
 }
