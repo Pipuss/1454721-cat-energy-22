@@ -1,11 +1,27 @@
 .goods-list {
   @include reset-list;
+
+  @include width--l {
+    min-width: 896px;
+    grid-column: 1 / 2;
+  }
 }
 
 .goods-list__gift {
   min-width: 280px;
   min-height: 289px;
   background: url("../../img/image/gift-photo-mobile.png") no-repeat;
+
+  @include width--m {
+    min-width: 708px;
+    min-height: 200px;
+  }
+
+  @include width--l {
+    min-width: 245px;
+    min-height: 289px;
+    grid-column: 2 / 3;
+  }
 }
 
 .goods-list__gift p {

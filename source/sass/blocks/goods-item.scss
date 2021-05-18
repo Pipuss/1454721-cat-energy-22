@@ -1,8 +1,40 @@
+.goods-item {
+  @include width--m {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}
+
 .goods-item__title {
   text-transform: uppercase;
   color: $color-special_dark-grey-2;
 
   @include set-font-item (16px, 1);
+
+  @include width--m {
+    @include set-font-item (20px, 1);
+  }
+
+  @include width--l {
+    min-width: 245px;
+    margin-right: 40px;
+  }
+}
+
+.goods-item__description {
+  display: flex;
+  justify-content: space-between;
+
+  @include width--m {
+    @include set-font-item (16px, 1.25);
+    min-width: 225px;
+  }
+
+  @include width--l {
+    min-width: 288px;
+  }
 }
 
 .goods-item__description span {
@@ -12,8 +44,12 @@
 }
 
 .goods-item__order-button {
-  min-width: 280px;
+  min-width: 100%;
   min-height: 40px;
 
   @include set-font-item (16px, 1.25);
+
+  @include width--l {
+    min-width: 244px;
+  }
 }
