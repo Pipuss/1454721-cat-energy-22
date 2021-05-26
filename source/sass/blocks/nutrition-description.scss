@@ -1,11 +1,11 @@
 .nutrition-description__list {
-  @include set-font-item (16px, 1.5, $f-family_arial);
   @include reset-list;
+  padding-top: 2px;
 
   @include width--m {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 90px;
+    margin-bottom: 22px;
   }
 
   @include width--l {
@@ -25,6 +25,8 @@
 }
 
 .nutrition-description__list li {
+  @include set-font-item (14px, 1.29, $f-family_arial);
+
   min-height: 60px;
   padding-left: 80px;
   position: relative;
@@ -35,13 +37,16 @@
   }
 
   @include width--m {
+    @include set-font-item (16px, 1.5, $f-family_arial);
+
     width: 246px;
     min-height: 280px;
     padding-left: 0;
     padding-top: 151px;
 
     &:nth-child(odd) {
-      margin-right: 153px;
+      margin-right: 140px;
+      margin-bottom: 35px;
     }
   }
 
@@ -59,7 +64,7 @@
   .nutrition-item_#{$i}::before {
     content: "";
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 0;
     width: 60px;
     height: 60px;

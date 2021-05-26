@@ -1,5 +1,10 @@
 .categories-list {
   @include reset-list;
+  margin-bottom: 26px;
+
+  @include width--m {
+    margin-bottom: 55px;
+  }
 
   @include width--l {
     display: flex;
@@ -12,6 +17,7 @@
   background-color: $color-basic_grey;
   position: relative;
   padding-left: 20px;
+  padding-right: 20px;
   padding-top: 21px;
   margin-bottom: 20px;
 
@@ -35,19 +41,19 @@
 .categories-item--weight-loss::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 30px;
+  top: 20px;
+  left: 23px;
   z-index: 1;
   width: 50px;
   height: 53px;
-  background: url("../img/image/cat_back.png") no-repeat;
+  background: url("../img/image/cat_back.svg") no-repeat;
   background-size: cover;
 
   @include width--m {
     width: 200px;
     height: 211px;
-    top: 41px;
-    left: 430px;
+    top: 89px;
+    left: 446px;
   }
 
   @include width--l {
@@ -61,18 +67,18 @@
 .categories-item--weight-gain::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 30px;
+  top: 23px;
+  left: 13px;
   width: 67px;
   height: 50px;
-  background: url("../img/image/cat_back-2.png") no-repeat;
+  background: url("../img/image/cat_back-2.svg") no-repeat;
   background-size: cover;
 
   @include width--m {
     width: 268px;
     height: 200px;
-    top: 41px;
-    left: 400px;
+    top: 100px;
+    left: 412px;
   }
 
   @include width--l {
@@ -86,14 +92,15 @@
 .categories-item__title {
   text-transform: uppercase;
   font-weight: 400;
-  padding-left: 91px;
+  padding-left: 72px;
+  padding-top: 8px;
   margin-bottom: 29px;
 
   @include set-font-item (24px, 1.54);
 
   @include width--m {
     padding-left: 0;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
 
     @include set-font-item (36px, 1);
   }
@@ -105,18 +112,38 @@
 }
 
 .categories-item__text {
-  width: 227px;
+  @include set-font-item (14px, 1.29, $f-family_arial);
+  position: relative;
+  margin: 0;
+  margin-bottom: 42px;
 
-  @include set-font-item (16px, 1.5, $f-family_arial);
+  @media (max-width: $tablet-width) {
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      left: 0;
+      bottom: -23px;
+      background-color: $color-border-gray_2;
+    }
+  }
 
   @include width--m {
-    width: 377px;
+    @include set-font-item (16px, 1.5, $f-family_arial);
+    width: 374px;
     margin-bottom: 48px;
   }
 
   @include width--l {
     width: 467px;
     margin-bottom: 23px;
+  }
+}
+
+.categories-item--weight-gain .categories-item__text {
+  @include width--m {
+    width: 342px;
   }
 }
 
@@ -127,5 +154,9 @@
 
   @include width--m {
     @include set-font-item (20px, 1.5);
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -45,6 +45,20 @@ img {
   background-color: $color-basic_green;
   border: none;
   outline: none;
+
+  @include width--m {
+    &:hover {
+      background-color: $color-basic_green-2;
+    }
+  }
+}
+
+.button span {
+  @include width--m {
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }
 
 .wrapper {
