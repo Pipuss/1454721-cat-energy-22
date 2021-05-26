@@ -31,6 +31,8 @@
   @include width--l {
     min-width: 570px;
     min-height: 374px;
+    padding-top: 70px;
+    margin-bottom: 15px;
 
     &:not(:last-child) {
       margin-right: 80px;
@@ -59,8 +61,8 @@
   @include width--l {
     width: 100px;
     height: 106px;
-    top: 25px;
-    left: 90px;
+    top: 39px;
+    left: 53px;
   }
 }
 
@@ -84,8 +86,8 @@
   @include width--l {
     width: 134px;
     height: 100px;
-    top: 25px;
-    left: 90px;
+    top: 45px;
+    left: 34px;
   }
 }
 
@@ -106,7 +108,7 @@
   }
 
   @include width--l {
-    padding-left: 214px;
+    padding-left: 163px;
     margin-bottom: 73px;
   }
 }
@@ -136,7 +138,7 @@
   }
 
   @include width--l {
-    width: 467px;
+    width: 465px;
     margin-bottom: 23px;
   }
 }
@@ -144,6 +146,10 @@
 .categories-item--weight-gain .categories-item__text {
   @include width--m {
     width: 342px;
+  }
+
+  @include width--l {
+    width: 465px;
   }
 }
 

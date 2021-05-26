@@ -1,7 +1,12 @@
 .catalog__title {
   font-weight: 400;
+  margin-top: 10px;
 
   @include set-font-item (36px, 1);
+
+  @include width--l {
+    @include set-font-item (60px, 1);
+  }
 }
 
 .catalog__list {

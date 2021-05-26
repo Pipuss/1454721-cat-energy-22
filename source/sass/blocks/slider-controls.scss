@@ -8,6 +8,12 @@
   @include width--m {
     width: 81.25%;
   }
+
+  @include width--l {
+    width: 82.25%;
+    margin: 0;
+    margin-left: 90px;
+  }
 }
 
 .slider-controls__text {
@@ -29,6 +35,10 @@
       background-position: 0 0;
       background-repeat: repeat-x;
       background-size: 2px 1px;
+
+      @include width--l {
+        bottom: -1px;
+      }
     }
 
     &:hover::after {

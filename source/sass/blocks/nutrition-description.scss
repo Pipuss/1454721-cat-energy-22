@@ -9,7 +9,8 @@
   }
 
   @include width--l {
-    margin-bottom: 205px;
+    margin-bottom: 200px;
+    justify-content: space-between;
   }
 }
 
@@ -51,7 +52,7 @@
   }
 
   @include width--l {
-    width: 230px;
+    width: 245px;
 
     &:not(:last-child) {
       margin-right: 45px;
@@ -88,6 +89,11 @@
       height: 280px;
       background: url(../img/icon/number#{$i}.png) no-repeat;
       z-index: -1;
+    }
+
+    @include width--l {
+      top: 39px;
+      right: 8px;
     }
   }
 }
