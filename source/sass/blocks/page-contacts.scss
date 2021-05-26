@@ -28,7 +28,6 @@
 }
 
 .page-contacts__title {
-  width: 140px;
   color: $color-special-black;
 
   @include reset-indent;
@@ -44,6 +43,7 @@
 .page-contacts__text {
   max-width: 140px;
   color: $color-special_dark-grey;
+  font-style: normal;
 
   @include set-font-item (14px, 1.43, $f-family_arial);
 

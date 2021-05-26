@@ -8,25 +8,56 @@
 }
 
 .goods-list__gift {
+  text-align: center;
+  position: relative;
   min-width: 280px;
   min-height: 289px;
-  background: url("../../img/image/gift-photo-mobile.png") no-repeat;
+  padding-top: 186px;
+  background: url("../img/image/gift-photo-mobile.png") no-repeat;
+  background-position: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/image/gift-photo-mobile@2x.png");
+    background-size: 280px auto;
+  }
 
   @include width--m {
     min-width: 708px;
     min-height: 200px;
   }
 
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    background-image: url("../img/image/gift-photo-tablet.png");
+    background-size: 708px auto;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/image/gift-photo-tablet@2x.png");
+    }
+  }
+
   @include width--l {
     min-width: 245px;
     min-height: 289px;
     grid-column: 2 / 3;
+    background-size: 245px auto;
   }
 }
 
 .goods-list__gift p {
+  margin: 0;
+  display: inline-block;
   width: 161px;
   color: $color-white;
 
   @include set-font-item (16px, 1.25, $f-family_arial);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 98px;
+    width: 78px;
+    height: 80px;
+    background: url("../img/icon/icon_gift.svg") no-repeat;
+  }
 }

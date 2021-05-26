@@ -1,6 +1,7 @@
 .promo-section {
   color: $color-white;
   min-height: 480px;
+  margin-bottom: 24px;
 
   &::before {
     content: "";
@@ -9,7 +10,12 @@
     height: 302px;
     margin: 0 auto;
     margin-bottom: -285px;
-    background: url("../../img/image/index-background-desktop-2.png") no-repeat;
+    background: url("../img/image/index-promo-background.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/image/index-promo-background@2x.png");
+      background-size: 320px auto;
+    }
   }
 
   &::after {
@@ -18,14 +24,14 @@
     width: 320px;
     height: 302px;
     margin: 0 auto;
-    margin-top: -470px;
+    margin-top: -481px;
     background-color: $color-basic_green;
     opacity: 0.85;
   }
 
   @include width--m {
     color: $color-black;
-    margin-bottom: 190px;
+    margin-bottom: 113px;
     padding-left: 83px;
 
     &::before,
@@ -42,8 +48,13 @@
       right: 0;
       width: 720px;
       height: 694px;
-      background: url("../../img/image/index-background-desktop-1.png") no-repeat;
+      background: url("../img/image/index-background-desktop.png") no-repeat;
       z-index: -1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/image/index-background-desktop@2x.png");
+        background-size: cover;
+      }
     }
 
     &::after {
@@ -63,7 +74,13 @@
   position: relative;
   z-index: 1;
 
+  @media (min-width: $mobile-width) and (max-width: $tablet-width -1) {
+    width: 280px;
+    margin: 0 auto;
+  }
+
   @include width--l {
+    width: 100%;
     display: grid;
     grid-template-columns: min-content 552px;
   }
@@ -75,13 +92,16 @@
   font-weight: 400;
   text-align: center;
   margin-bottom: 25px;
+  padding-left: 11px;
+  padding-top: 10px;
 
   @include set-font-item (36px, 1);
 
   @include width--m {
-    width: 415px;
+    width: 425px;
     text-align: left;
     margin-bottom: 41px;
+    padding-left: 3px;
 
     @include set-font-item (60px, 1);
   }
@@ -89,15 +109,16 @@
 
 .promo-section__tagline {
   @include reset-indent;
-  margin-bottom: 29px;
+  margin-bottom: 30px;
   text-transform: uppercase;
-  text-align: center;
+  padding-left: 40px;
 
   @include set-font-item (14px, 1);
 
   @include width--m {
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 21px;
+    padding-left: 5px;
 
     @include set-font-item (20px, 1);
   }
@@ -110,6 +131,7 @@
   @include width--m {
     width: 709px;
     height: 609px;
+    margin-left: -84px;
   }
 
   @include width--l {
@@ -121,16 +143,16 @@
 }
 
 .promo-section__button {
-  min-width: 280px;
+  width: 100%;
   min-height: 40px;
-  padding-left: 10px;
 
   @include set-font-item (14px, 1.29);
 
   @include width--m {
     position: relative;
-    top: -590px;
+    top: -584px;
     z-index: 1;
+    width: 0;
     min-width: 244px;
     min-height: 54px;
 

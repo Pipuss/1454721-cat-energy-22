@@ -3,9 +3,10 @@
 }
 
 .page-footer .wrapper {
+  min-height: 236px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 
   @include width--m {
     flex-direction: row;
@@ -13,25 +14,73 @@
   }
 }
 
+.page-footer__logo {
+  padding-top: 37px;
+  position: relative;
+  text-align: center;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-border-gray_2;
+  }
+}
+
+.page-footer__logo-image {
+  width: 128px;
+  height: 24px;
+
+  @include width--m {
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
+
 .social {
   @include reset-list;
+  align-self: center;
   display: flex;
+  min-width: 130px;
   justify-content: space-between;
   align-items: center;
-  min-width: 130px;
+  padding-top: 13px;
 }
 
-.social__link--vk {
-  fill: $color-slecial-grey-2;
-}
-
+.social__link--vk,
 .social__link--insta {
   fill: $color-slecial-grey-2;
+
+  &:hover {
+    fill: $color-basic_green;
+  }
+
+  &:active {
+    fill: $color-basic_green;
+    opacity: 0.3;
+  }
 }
 
 .social__link--fb {
   fill-opacity: 0;
   stroke: $color-slecial-grey-2;
+
+  &:hover {
+    stroke: $color-basic-green;
+  }
+
+  &:active {
+    stroke: $color-basic-green;
+    stroke-opacity: 0.3;
+  }
 }
 
 .copyright {
@@ -39,6 +88,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding-bottom: 21px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -23px;
+    width: 100%;
+    height: 1px;
+    background-color: $color-border-gray_2;
+  }
 
   @include width--m {
     width: 0;
@@ -52,9 +113,24 @@
 
   @include width--m {
     margin-right: 22px;
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
 .copyright__logo {
   fill: $color-slecial-grey-2;
+
+  @include width--m {
+    &:hover {
+      fill: $color-basic_green;
+    }
+
+    &:active {
+      fill: $color-basic_green;
+      opacity: 0.3;
+    }
+  }
 }
